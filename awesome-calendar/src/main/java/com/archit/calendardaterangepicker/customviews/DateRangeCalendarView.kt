@@ -47,8 +47,6 @@ class DateRangeCalendarView : LinearLayout, DateRangeCalendarViewApi {
         calendarStyleAttr = CalendarStyleAttrImpl(context, attrs)
         val layoutInflater = LayoutInflater.from(context)
         layoutInflater.inflate(layout.layout_calendar_container, this, true)
-        val rlHeaderCalendar = findViewById<RelativeLayout>(R.id.rlHeaderCalendar)
-        rlHeaderCalendar.background = calendarStyleAttr.headerBg
         tvYearTitle = findViewById(R.id.tvYearTitle)
         tvYearTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, calendarStyleAttr.textSizeTitle)
         imgVNavLeft = findViewById(R.id.imgVNavLeft)
