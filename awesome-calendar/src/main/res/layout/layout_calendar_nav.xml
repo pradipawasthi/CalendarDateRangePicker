@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/rlHeaderCalendar"
+<LinearLayout android:id="@+id/rlHeaderCalendar"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/dateTitlePaddingBottom"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:paddingBottom="@dimen/dateTitlePaddingBottom">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgVNavLeft"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_left"
-        android:layout_marginEnd="32dp"
-        android:layout_toStartOf="@+id/tvYearTitle"
-        />
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_left_24" />
 
     <com.archit.calendardaterangepicker.customviews.CustomTextView
         android:id="@+id/tvYearTitle"
         android:layout_width="wrap_content"
         android:gravity="center"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_height="match_parent"
         android:tag="dateTitle"
-        android:fontFamily="@font/galano_grotesque"
-        android:textStyle="normal"
-        android:textSize="16sp"
         android:textColor="#1a181e"
-        android:lineSpacingExtra="8sp"
-        tools:text="December 2020"
         android:text="FEBRUARY 2014"
-        />
+        android:fontFamily="@font/galano_grotesque"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:layout_marginHorizontal="32dp"
+        android:textSize="@dimen/text_size_title" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgVNavRight"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/tvYearTitle"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_right" />
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="4dp"
+        android:src="@drawable/ic_right_24" />
+</LinearLayout>
